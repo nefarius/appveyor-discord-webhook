@@ -87,7 +87,7 @@ $WEBHOOK_DATA="{
 }"
 
 Invoke-RestMethod -Uri "$WEBHOOK_URL" -Method "POST" -UserAgent "AppVeyor-Webhook" `
-  -ContentType "application/json" -Header @{"X-Author"="k3rn31p4nic#8383"} `
+  -ContentType "application/json; charset=utf-8" -Header @{"X-Author"="k3rn31p4nic#8383"} `
   -Body $WEBHOOK_DATA
 
 Write-Output "[Webhook]: Successfully sent the webhook."
